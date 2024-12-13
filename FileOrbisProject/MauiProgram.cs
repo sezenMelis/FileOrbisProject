@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using FileOrbisProject.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace FileOrbisProject
 {
@@ -15,8 +16,10 @@ namespace FileOrbisProject
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<ClientPageViewModel>();
+            builder.Services.AddSingleton<AddClientPageViewModel>();
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

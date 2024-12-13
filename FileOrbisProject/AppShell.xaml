@@ -12,4 +12,7 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <FlyoutItem Route="HomePage" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Client" Icon="{x:Static models:Icons.AboutUs}" ContentTemplate="{DataTemplate views:ClientPage}"/>
+    </FlyoutItem>
 </Shell>

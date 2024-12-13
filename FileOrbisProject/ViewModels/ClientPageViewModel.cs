@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FileOrbisProject.Views;
+using CommunityToolkit.Mvvm.Input;
 
-namespace FileOrbisProject.ViewModels
+
+namespace FileOrbisProject.ViewModels;
+
+public partial class ClientPageViewModel :BaseClientViewModel
 {
-    public partial class ClientPageViewModel
+    [ICommand]
+    private async void OnAddClient()
     {
- 
+        await Shell.Current.GoToAsync(nameof(AddClientPage));
     }
+
 }

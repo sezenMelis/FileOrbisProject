@@ -1,6 +1,7 @@
 namespace FileOrbisProject.Views;
 using FileOrbisProject.ViewModels;
 
+
 public partial class ClientPage : ContentPage
 {
 	ClientPageViewModel clientPageViewModel;
@@ -9,4 +10,6 @@ public partial class ClientPage : ContentPage
 		InitializeComponent();
 		this.BindingContext = clientPageViewModel = new ClientPageViewModel();
 	}
+
+	
 }
